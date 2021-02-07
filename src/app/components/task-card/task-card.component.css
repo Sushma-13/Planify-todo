@@ -1,0 +1,19 @@
+.mat-card {
+    height: 1.5rem;
+    width: 20rem;
+    margin: 0.5rem auto;
+    border: 1px solid #DCDCDE;
+    box-shadow: 0px 2px 1px -1px #DCDCDE, 0px 1px 1px 0px #DCDCDE, 0px 1px 3px 0px #DCDCDE;
+    display: flex;
+    justify-content: space-between;
+    cursor: move;
+    color: white;
+}
+
+.action .mat-icon:hover {
+    cursor: pointer;
+}
+
+.mat-icon{
+    color: white;
+}

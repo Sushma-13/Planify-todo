@@ -1,0 +1,32 @@
+.form li{
+    list-style: none;
+    margin-bottom: 1.34375em;
+}
+.form .mat-form-field{
+    width: 80%;
+}
+
+::ng-deep .mat-dialog-container{
+    width: 50rem;
+}
+
+.mat-radio-button {
+    margin-right: 1rem;
+}
+
+.radio-label{
+    margin-bottom: 1.34375em;
+    display: block;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.column{
+    /* width: 50%; */
+}
+.mat-calendar {
+    width: 18rem;
+    margin-top: -2rem;
+}

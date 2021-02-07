@@ -1,0 +1,17 @@
+.progress {
+    text-align: right;
+    margin: 0 4rem;
+    height: 2rem;
+}
+
+.low {
+    color: red;
+}
+
+.medium {
+    color: #F2BF11;
+}
+
+.high {
+    color: green;
+}

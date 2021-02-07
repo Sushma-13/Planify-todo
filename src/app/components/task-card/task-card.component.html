@@ -1,0 +1,13 @@
+<mat-card *ngIf="task" [ngStyle]="{'background': task.type===0 ? 'red' : task.type===1 ? '#F2BF11' :'green'}">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image">
+            <mat-icon>{{task.priority==='high'?'arrow_upward':task.priority==='low'?'arrow_downward':'remove'}}
+            </mat-icon>
+        </div>
+        <mat-card-title>{{task.title}}</mat-card-title>
+    </mat-card-header>
+    <div class="action">
+        <mat-icon (click)="modify()">create</mat-icon>
+        <mat-icon style="margin-left: 0.6rem;" (click)="remove()">delete</mat-icon>
+    </div>
+</mat-card>

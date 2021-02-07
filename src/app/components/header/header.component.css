@@ -1,0 +1,17 @@
+.header{
+    background: #9C27B0;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%);
+    margin-bottom: 0.2rem;
+}
+
+.logo{
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+.add-btn{
+    border: 1px solid white;
+}

@@ -1,0 +1,42 @@
+<h1 mat-dialog-title style="text-align: center;">{{action===1?'Edit ':'Add '}}Task</h1>
+<div mat-dialog-content>
+    <form class="form" #taskForm="ngForm">
+        <div class="column">
+            <li>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Title</mat-label>
+                    <input matInput name="title" #title="ngModel" [(ngModel)]="task.title" required>
+                    <mat-error *ngIf="title.invalid && title.touched">*required</mat-error>
+                </mat-form-field>
+            </li>
+            <li>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput name="description" [(ngModel)]="task.description"></textarea>
+                </mat-form-field>
+            </li>
+            <li>
+                <label id="Select-priority" class="radio-label" style="font-weight: 500;">Priority</label>
+                <mat-radio-group aria-labelledby="Select-priority" name="priority" #priority="ngModel"
+                    [(ngModel)]="task.priority" required>
+                    <mat-radio-button value="low">Low</mat-radio-button>
+                    <mat-radio-button value="medium">Medium</mat-radio-button>
+                    <mat-radio-button value="high">High</mat-radio-button>
+                    <mat-error *ngIf="priority.invalid && priority.touched">*required</mat-error>
+                </mat-radio-group>
+
+            </li>
+        </div>
+        <div class="column">
+            <mat-calendar [selected]="selectedDate" (selectedChange)="onDateSelect($event)">
+            </mat-calendar>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <div style="margin-left: auto;">
+        <button mat-button (click)="close()">CANCEL</button>
+        <button mat-button (click)="save(taskForm)" [disabled]="!taskForm.valid" *ngIf="action===0">ADD</button>
+        <button mat-button (click)="update(taskForm)" [disabled]="!taskForm.valid" *ngIf="action===1">UPDATE</button>
+    </div>
+</div>

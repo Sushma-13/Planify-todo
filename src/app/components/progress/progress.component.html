@@ -1,0 +1,5 @@
+<div class="progress">
+    <h2 *ngIf="percentage" [ngClass]="percentage<33?'low':
+    percentage>33 && percentage<66?'medium':'high'">
+        {{percentage}} %</h2>
+</div>

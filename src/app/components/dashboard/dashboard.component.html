@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<app-progress [total]="alltasks.length" [completed]="completed.length"></app-progress>
+
+
+<div class="row" cdkDropListGroup>
+    <div class="column" cdkDropList [cdkDropListData]="pending" id="pendingTasks" (cdkDropListDropped)="drop($event)">
+        <h1 class="title">Pending</h1>
+        <app-task-card [cdkDragData]="task" [task]="task" *ngFor="let task of pending" cdkDrag>
+        </app-task-card>
+    </div>
+    <div class="column" cdkDropList [cdkDropListData]="inProgress" id="inProgressTasks"
+        (cdkDropListDropped)="drop($event)">
+        <h1 class="title">In-Progress</h1>
+        <app-task-card [cdkDragData]="task" [task]="task" *ngFor="let task of inProgress" cdkDrag>
+        </app-task-card>
+    </div>
+    <div class="column" cdkDropList [cdkDropListData]="completed" id="completedTasks"
+        (cdkDropListDropped)="drop($event)">
+        <h1 class="title">Completed</h1>
+        <app-task-card [cdkDragData]="task" [task]="task" *ngFor="let task of completed" cdkDrag>
+        </app-task-card>
+    </div>
+</div>
