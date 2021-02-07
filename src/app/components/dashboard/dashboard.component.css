@@ -19,7 +19,7 @@
     color: #9C27B0;
 }
 
-@media all and (max-width: 1430px) {
+@media all and (max-width: 1330px) {
     .column {
         border-right: none;
     }
