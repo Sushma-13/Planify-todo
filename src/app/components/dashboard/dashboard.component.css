@@ -2,11 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    height: 80%;
 }
 
 .column {
     width: 30rem;
-    height: 80vh;
     border-right: 1px solid #dcdcde;
 }
 
@@ -17,4 +17,10 @@
 .title {
     text-align: center;
     color: #9C27B0;
+}
+
+@media all and (max-width: 1430px) {
+    .column {
+        border-right: none;
+    }
 }

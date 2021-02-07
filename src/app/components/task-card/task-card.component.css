@@ -1,6 +1,6 @@
 .mat-card {
-    height: 1.5rem;
-    width: 20rem;
+    height: 1.3rem;
+    width: 75%;
     margin: 0.5rem auto;
     border: 1px solid #DCDCDE;
     box-shadow: 0px 2px 1px -1px #DCDCDE, 0px 1px 1px 0px #DCDCDE, 0px 1px 3px 0px #DCDCDE;
@@ -14,6 +14,13 @@
     cursor: pointer;
 }
 
-.mat-icon{
+.mat-icon {
     color: white;
+}
+
+.mat-card-header {
+    flex: 10;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
 }
